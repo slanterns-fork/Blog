@@ -4,3 +4,4 @@ title: Typeblog
 url: http://typeblog.net
 paginate: 5
 disqus_shortname: hxbdx
+paginate_path: "page:num"
