@@ -12,14 +12,14 @@ title: Typeblog
     <br class="clr" />
     <div id="container" class="w">
         <section id="page">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             {% include single.html %}
             {% endfor %}
                 <nav class="pagenavi">
-                {% if previous_page %}
+                {% if paginator.previous_page %}
                 <a href="{{ previous_page_path }}"><<上一页</a>
                 {% endif %}
-                {% if next_page %}
+                {% if paginator.next_page %}
                 <a href="{{ next_page_path }}"><<上一页</a>
                 {% endif %}
                 </nav>
