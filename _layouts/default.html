@@ -19,62 +19,18 @@
     </div>
 
 <script type="text/javascript">
-/* <![CDATA[ */
-    var disqus_url = '{{ site.url }}{{ page.url }}';
-    var disqus_identifier = '{{ page.id }} {{ site.url }}{{ page.url }}';
-    var disqus_container_id = 'disqus_thread';
-    var disqus_domain = 'disqus.com';
-    var disqus_shortname = 'hxbdx';
-    var disqus_title = "{{ page.title }}";
-        var disqus_config = function () {
-        var config = this; // Access to the config object
-        config.language = '';
+  var disqus_shortname = 'hxbdx';
 
-        /*
-           All currently supported events:
-            * preData — fires just before we request for initial data
-            * preInit - fires after we get initial data but before we load any dependencies
-            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
-            * afterRender - fires when template is rendered but before we show it
-            * onReady - everything is done
-         */
+  var disqus_url = "{{ site.url }}{{ page.url }}";
 
-        config.callbacks.preData.push(function() {
-            // clear out the container (its filled for SEO/legacy purposes)
-            document.getElementById(disqus_container_id).innerHTML = '';
-        });
-                config.callbacks.onReady.push(function() {
-            // sync comments in the background so we don't block the page
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = '?cf_action=sync_comments&post_id={{ page.id }}';
-
-            var firstScript = document.getElementsByTagName( "script" )[0];
-            firstScript.parentNode.insertBefore(script, firstScript);
-        });
-                    };
-/* ]]> */
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 </script>
-
-<script type="text/javascript">
-/* <![CDATA[ */
-    var DsqLocal = {
-        'trackbacks': [
-        ],
-        'trackback_url': "http:\/\/typeblog.net\/archives\/168\/trackback"    };
-/* ]]> */
-</script>
-
-<script type="text/javascript">
-/* <![CDATA[ */
-(function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-/* ]]> */
-</script></div>
+<noscript>请打开JavaScript来浏览<a href="http://disqus.com/?ref_noscript">DisQus 评论.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">请等待评论加载</a></div>
 </div>
         <aside id="sidebar">
         {% include sidebar.html %}
