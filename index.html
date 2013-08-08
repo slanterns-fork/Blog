@@ -17,10 +17,14 @@ title: Typeblog
             {% endfor %}
                 <nav class="pagenavi">
                 {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}"><</a>
+                <a href="{{ paginator.previous_page_path }}">上一页</a>
+                {% else %}
+                <a href='javascript:alert("到头啦!")' >上一页</a>
                 {% endif %}
                 {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path }}">></a>
+                <a href="{{ paginator.next_page_path }}">下一页</a>
+                {% else %}
+                <a href='javascript:alert("到头啦!")' >下一页</a>
                 {% endif %}
                 </nav>
         </section>
