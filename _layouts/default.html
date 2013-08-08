@@ -1,0 +1,23 @@
+{% include header.html %}
+<body>
+<div id="wrapper" class="w">
+    <div id="settings">
+        <div class="setting">
+            <div class="sidebar-control"><a href="javascript:;" class="b open" status="open" title="点击关闭">打开</a>侧边栏</div>
+        </div>
+        <a href="javascript:;" class="setting-button">个性化设置</a>
+    </div>
+    <h2 class="page-title">{{ page.title }}</h2>
+    <br class="clr" />
+    <div id="container" class="w">
+        <div id="post">
+            <div class="post-content">
+                {{ content }}
+            </div>
+        </div>
+        <aside id="sidebar">
+        {% include sidebar.html %}
+        </aside>
+    </div>
+</div>
+{% include footer.html %}

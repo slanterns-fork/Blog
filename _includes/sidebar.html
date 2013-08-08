@@ -1,0 +1,21 @@
+<ul>
+    <li>
+        <h3><span class="side-span-open">&gt;</span>友情提醒</h3>
+        <div>
+            <ul>
+                <li>本站在IE8以下浏览器可能显示不正常</li>
+                <li>推荐使用Chrome访问本站</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <h3><span class="side-span-open">&gt;</span>近期文章</h3>
+        <div>
+            <ul>
+                {% for post in site.posts limit:10 %}
+                <li><a href="{{ post.url}}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,32 @@
+---
+layout: index
+title: Typeblog
+---
+<div id="wrapper" class="w">
+    <div id="settings">
+        <div class="setting">
+            <div class="sidebar-control"><a href="javascript:;" class="b open" status="open" title="点击关闭">打开</a>侧边栏</div>
+        </div>
+        <a href="javascript:;" class="setting-button">个性化设置</a>
+    </div>
+    <br class="clr" />
+    <div id="container" class="w">
+        <section id="page">
+            {% for post in site.posts %}
+            {% include single.html %}
+            {% endfor %}
+                <nav class="pagenavi">
+                {% if previous_page %}
+                <a href="{{ previous_page_path }}"><<上一页</a>
+                {% endif %}
+                {% if next_page %}
+                <a href="{{ next_page_path }}"><<上一页</a>
+                {% endif %}
+                </nav>
+        </section>
+        <aside id="sidebar">
+        {% include sidebar.html %}
+        </aside>
+        <br class="clr" />
+    </div>
+</div>
