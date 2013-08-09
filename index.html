@@ -42,6 +42,7 @@ title: Typeblog
                 <a href="{{ site.baseurl }}page{{ count }}">{{ count }}</a>
                 {% endif %}
                 {% endfor %}
+                {% endif %}
                 {% else %}
                 {% for count in (paginator.previous_page..paginator.total_pages) limit:3 %}
                 {% if count == paginator.page %}
