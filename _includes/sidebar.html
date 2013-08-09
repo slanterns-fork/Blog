@@ -12,7 +12,7 @@
         <h3><span class="side-span-open">&gt;</span>近期文章</h3>
         <div>
             <ul>
-                {% for post in site.posts limit:10 %}
+                {% for post in site.posts limit:7 %}
                 <li><a href="{{ post.url}}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
