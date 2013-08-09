@@ -4,15 +4,15 @@ title: 小记触摸版CWM Recovery的制作
 category: tech
 summary: 众所周知，坑爹的CWM Touch木有开放源代码……<br />但是我不甘心，我要给米1做触摸Recovery。<br />于是在Github上寻找，一直没有找到开源的。<br />无意间在深度OS的GITHUB上找到了一部分的触摸源代码。
 ---
-众所周知，坑爹的CWM Touch木有开放源代码……<br />
-但是我不甘心，我要给米1做触摸Recovery。<br />
-于是在Github上寻找，一直没有找到开源的。<br />
-无意间在深度OS的GITHUB上找到了一部分的触摸源代码。<br />
-看这个commit：<https://github.com/ShenduOS/android_bootable_recovery/commit/19866163c49297d1e6e6348d2db2aa38cac7ce55><br />
-cherry-pick过来，编译，发现只能支持触摸按键操作，而且还不能触摸。<br />
-经过一番调试，把触摸消息事件号改为50，终于可以正常触摸了。可是感觉很不爽，只能用触摸按键操作。<br />
-但是既然触摸按键可以了，为什么全屏触摸不可以呢？<br />
-首先，要做一个全触摸的recovery，需要增大菜单项距离。<br />
+众所周知，坑爹的CWM Touch木有开放源代码……  
+但是我不甘心，我要给米1做触摸Recovery。  
+于是在Github上寻找，一直没有找到开源的。  
+无意间在深度OS的GITHUB上找到了一部分的触摸源代码。  
+看这个commit：<https://github.com/ShenduOS/android_bootable_recovery/commit/19866163c49297d1e6e6348d2db2aa38cac7ce55>  
+cherry-pick过来，编译，发现只能支持触摸按键操作，而且还不能触摸。  
+经过一番调试，把触摸消息事件号改为50，终于可以正常触摸了。可是感觉很不爽，只能用触摸按键操作。  
+但是既然触摸按键可以了，为什么全屏触摸不可以呢？  
+首先，要做一个全触摸的recovery，需要增大菜单项距离。  
 于是添加了一个EXT_HEIGHT常量，定义为3倍字符高度。<br />
 编译，发现顶部空白巨大。<br />
 我认为这只是菜单需要一个偏移量。<br />
