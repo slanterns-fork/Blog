@@ -20,18 +20,28 @@ title: Typeblog
                 <a href="{{ site.baseurl }}" class="extend">«</a>
                 <a href="{{ paginator.previous_page_path }}">‹</a>
                 {% endif %}
+                {% if paginator.page <= 2 %}
                 {% if paginator.page == 1 %}
                 <a href="{{ site.baseurl }}" class="current">1</a>
                 {% else %}
                 <a href="{{ site.baseurl }}">1</a>
                 {% endif %}
-                {% for count in (2..paginator.total_pages) %}
+                {% for count in (2..3) %}
                 {% if count == paginator.page %}
                 <a href="{{ site.baseurl }}page{{ count }}" class="current">{{ count }}</a>
                 {% else %}
                 <a href="{{ site.baseurl }}page{{ count }}">{{ count }}</a>
                 {% endif %}
                 {% endfor %}
+                {% else %}
+                {% for count in (paginator.previous_page..paginator.total_pages) limit:3 %}
+                {% if count == paginator.page %}
+                <a href="{{ site.baseurl }}page{{ count }}" class="current">{{ count }}</a>
+                {% else %}
+                <a href="{{ site.baseurl }}page{{ count }}">{{ count }}</a>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
                 {% if paginator.next_page %}
                 <a href="{{ paginator.next_page_path }}">›</a>
                 <a href="{{ site.baseurl }}page{{ paginator.total_pages }}" class="extend">»</a>
