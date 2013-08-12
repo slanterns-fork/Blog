@@ -5,21 +5,21 @@ summary: 之前，在LOSP4.2上使用的是Android自带的接口来实现获取
 ---
 之前，在LOSP4.2上使用的是Android自带的接口来实现获取网速并显示在通知栏，可是到了4.3以后发现这个接口无论如何，返回值都是-1，无奈之下只得另寻办法
 
-功夫不负有心人，我还是找到了一个方法。在Linux中，__/proc/net/dev__ 这个路径，保存了当前网络的所有状态，我们把它用cat命令读取出来，格式是这样的：
-> Inter-|   Receive                                                |  Transmit
->  face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
->     lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> dummy0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet0:    1386      33    0   33    0     0          0         0    17664     120    0    0    0     0       0          0
-> rmnet1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet5:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet6:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> rmnet7:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
->   sit0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
-> ip6tnl0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+功夫不负有心人，我还是找到了一个方法。在Linux中， __/proc/net/dev__ 这个路径，保存了当前网络的所有状态，我们把它用cat命令读取出来，格式是这样的：
+> Inter-|   Receive                                                |  Transmit  
+>  face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed  
+>     lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> dummy0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet0:    1386      33    0   33    0     0          0         0    17664     120    0    0    0     0       0          0  
+> rmnet1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet5:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet6:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> rmnet7:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+>   sit0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
+> ip6tnl0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  
 
 可以看到，这个文件中保存的信息，首列是设备名，这个我们可以忽略，第一列是接收到的总流量。
 
