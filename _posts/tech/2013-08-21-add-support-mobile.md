@@ -10,7 +10,7 @@ summary: 我博客用的这个模板本来不是响应式的，在手机上浏�
 各位都知道，HTML中，引用css的方法是使用 __link__ 标签，而该标签支持一个属性 __media__ ，该属性的作用就是判断当前浏览器的条件是否符合，如果符合才调用该CSS。  
 所以，只须这样：
 
-{% hightlight html %}
+{% highlight html %}
 <link rel="stylesheet" media="all and (min-width: 1024px)" type="text/css" href="style.css" />
 <link rel="stylesheet" media="all and (max-width: 1024px)" type="text/css" href="style-mobile.css" />
 {% endhighlight %}
