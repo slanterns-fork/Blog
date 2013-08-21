@@ -17,19 +17,21 @@ $(function() {
         var stoB = $(".b");
         var stoPage = $("#page");
         var stoSidebar = $("#sidebar")
-        if (sidebarStatus == "open") {
-            stoB.attr("status","open");
-            stoB.addClass("open");
-            stoB.removeClass("close");
-            stoPage.css("width","780px");
-            stoSidebar.css("right","0");
-        } else {
-            stoB.attr("status","close");
-            stoB.addClass("close");
-            stoB.removeClass("open");
-            stoPage.css("width","1000px");
-            stoSidebar.css("right","-200px");
-        }
+        if (document.body.clientWidth > 1024) {
+            if (sidebarStatus == "open") {
+                stoB.attr("status","open");
+                stoB.addClass("open");
+                stoB.removeClass("close");
+                stoPage.css("width","780px");
+                stoSidebar.css("right","0");
+            } else {
+                stoB.attr("status","close");
+                stoB.addClass("close");
+                stoB.removeClass("open");
+                stoPage.css("width","1000px");
+                stoSidebar.css("right","-200px");
+            }
+       }
     }
     //单篇文章页面高度
     var sideh = $("#sidebar").height();
