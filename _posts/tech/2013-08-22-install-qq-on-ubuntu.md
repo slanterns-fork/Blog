@@ -2,7 +2,7 @@
 layout: default
 title: 在Ubuntu下安装QQ
 category: tech
-summary: 作为一个中国人，安装Ubuntu后，离开了QQ真是各种蛋疼，幸好有Wine这神器。当然，不是所有QQ都能在Wine下运行的，本文章以QQ国际版为例，实际上可以运行QQ2012、QQ国际版、TM2013，但QQ2013不行……<br />首先，通过软件中心安装Wine，然后删除默认的 __~/.wine__ 目录，重新创建：
+summary: 作为一个中国人，安装Ubuntu后，离开了QQ真是各种蛋疼，幸好有Wine这神器。当然，不是所有QQ都能在Wine下运行的，本文章以QQ国际版为例，实际上可以运行QQ2012、QQ国际版、TM2013，但QQ2013不行……<br />首先，通过软件中心安装Wine，然后删除默认的 <strong>~/.wine</strong> 目录，重新创建：
 ---
 作为一个中国人，安装Ubuntu后，离开了QQ真是各种蛋疼，幸好有Wine这神器。当然，不是所有QQ都能在Wine下运行的，本文章以QQ国际版为例，实际上可以运行QQ2012、QQ国际版、TM2013，但QQ2013不行……
 
