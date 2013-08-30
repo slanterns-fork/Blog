@@ -1,9 +1,8 @@
 ---
 layout: default
-title: 使用反向代理加速GITHUBPAGES
+title: 用反向代理加速GITHUB PAGES
 category: tech
-summary: GITHUB PAGES我之前有说过，这是GITHUB给程序猿提供的极好的免费建站平台，只要你会使用GIT，会使用Markdown标记模板，就可以免费建立博客。<br />
-而最近，由于GFW的“抽风”，GITHUB PAGES的访问十分不稳定，动不动就无法访问。没有办法，只得使用反向代理加速。<br />试过CloudFlare反代，虽然速度不错，可是CloudFlare本身也非常容易被墙。还剩下唯一一个选择，就是自己进行反代处理。
+summary: GITHUB PAGES我之前有说过，这是GITHUB给程序猿提供的极好的免费建站平台，只要你会使用GIT，会使用Markdown标记模板，就可以免费建立博客。<br />而最近，由于GFW的“抽风”，GITHUB PAGES的访问十分不稳定，动不动就无法访问。没有办法，只得使用反向代理加速。<br />试过CloudFlare反代，虽然速度不错，可是CloudFlare本身也非常容易被墙。还剩下唯一一个选择，就是自己进行反代处理。
 ---
 GITHUB PAGES我之前有说过，这是GITHUB给程序猿提供的极好的免费建站平台，只要你会使用GIT，会使用Markdown标记模板，就可以免费建立博客。
 
