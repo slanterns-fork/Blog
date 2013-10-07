@@ -12,7 +12,7 @@ Gerrit是一款被Android开源项目广泛采用的code review(代码审核)系
 
 这样就容易了：
 
-{% hightlight sh %}
+{% highlight sh %}
 git push 远程地址 本地分支:refs/for/远程分支
 {% endhighlight %}
 
