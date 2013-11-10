@@ -6,7 +6,7 @@ summary: 想必各位都体验过最新版环聊，最新版环聊采用的是�
 ---
 想必各位都体验过最新版环聊，最新版环聊采用的是一种左右滑动的抽屉界面，当点击actionbar图标或手动滑动的时候，界面就会切换，如图：
 
-![screenshot]({{ site.baseurl }}code/img/slidingpanlayout_1.png)
+![screenshot](/code/img/slidingpanlayout_1.png)
 
 大爱这种界面，正好我最近在写FlashBak备份软件，因此一直想着如何实现。  
 从Android Design的类查询里找到，这东西叫SlidingPaneLayout，在android-support-v4里面，功能是将自己的两个子view分成两层，可以通过滑动来切换。  
