@@ -9,7 +9,7 @@ title: 关于
 我就是我
 
 Credit: 
-- <https://biergaizi.info>
-- <https://github.com/jekyll/jekyll>
-- Nginx
-- More....
+*比尔盖子
+*Jekyll
+*Nginx
+*More....
