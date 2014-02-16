@@ -9,7 +9,7 @@ title: 关于
 我就是我
 
 Credit:  
-- Jekyll
-- Nginx
-- 比尔盖子
-- ...
+1. Jekyll
+1. Nginx
+1. 比尔盖子
+1. ...
