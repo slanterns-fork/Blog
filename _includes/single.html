@@ -7,7 +7,7 @@
                     <h2 class="alist-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                     <div class="alist-meta">分类: {{ post.categories }} / 发表于: {{ post.date | date: "%Y 年 %m 月 %d 日" }}</div>
                     <div class="alist-content">
-                        {{ post.content | truncatehtml: 200 }} <br /> [......]
+                        {{ post.content | truncatehtml: 50 }} <br /> [......]
                         <p class='read-more'><a href="{{ post.url }}">阅读全文</a></p>
                     </div>
                 </div>
