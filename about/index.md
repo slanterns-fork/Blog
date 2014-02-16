@@ -9,7 +9,7 @@ title: 关于
 我就是我
 
 Credit: 
-*比尔盖子
-*Jekyll
-*Nginx
-*More....
+*比尔盖子  
+*Jekyll  
+*Nginx  
+*More....  
