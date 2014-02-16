@@ -8,8 +8,8 @@ title: 关于
 博客作者一位  
 我就是我
 
-Credit:   
-+比尔盖子  
-+Jekyll  
-+Nginx  
-+More....  
+Credit:  
+-Jekyll
+-Nginx
+-比尔盖子
+-...
