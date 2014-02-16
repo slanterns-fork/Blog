@@ -7,3 +7,9 @@ title: 关于
 酱油一瓶  
 博客作者一位  
 我就是我
+
+Credit: 
+> <https://biergaizi.info>
+> <https://github.com/jekyll/jekyll>
+> Nginx
+> More....
