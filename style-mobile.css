@@ -131,9 +131,9 @@ a:hover {text-decoration:none; color:#000;}
 .widget_links li a:active {background:#E0E0E0;}
 
 /* Article style */
-#post {overflow:hidden; zoom:1; width:100%;}
+#post {zoom:1; width:100%;}
 .page-title {font-size:28px; line-height:33px; color:black;}
-.post-content {overflow:hidden; zoom:1; line-height:28px;}
+.post-content {zoom:1; line-height:28px;}
 .post-content a,.alist-content a {color:#DB27A7;}
 .post-content a:hover,.alist-content a:hover {color:#333;}
 .post-pagenavi {background:#F9F9F9; color:#999; font-size:12px; padding:5px 12px; overflow:hidden; zoom:1; margin:20px 0;}
