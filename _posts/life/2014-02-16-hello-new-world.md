@@ -6,6 +6,8 @@ category: life
 又是一个全新的开始。  
 受够了GitHub的龟速和对jekyll的限制，我决定使用VPS来搭建jekyll站点。此时，微博上的 @比尔盖子V 赞助我了一个VPS上的子帐号。  
 Jekyll是基于ruby的，所以用子帐号搭建毫无压力。  
+<!--more-->
+
 {% highlight sh %}
 gem install jekyll
 {% endhighlight %}

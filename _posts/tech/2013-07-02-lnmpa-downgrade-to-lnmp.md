@@ -2,12 +2,12 @@
 layout: default
 title: 军哥LNMPA环境降级到LNMP
 category: tech
-summary: 之前发现LNMP安装包支持升级LNMPA，于是升级了试试看。但是升级完成发现，因为LNMPA的原理是用Nginx反代Apache，导致反代这一层的效率损失过大，因此反而没有用Nginx执行php快了。<br />但是查询军哥lnmp安装包官网得出，LNMPA不能直接降级回LNMP。<br />这下蛋疼了，这坑爹的LNMPA。<br />于是继续翻阅，找到军哥提供的一种解决办法，相当于卸载LNMPA再重新安装LNMP。
 ---
 之前发现LNMP安装包支持升级LNMPA，于是升级了试试看。但是升级完成发现，因为LNMPA的原理是用Nginx反代Apache，导致反代这一层的效率损失过大，因此反而没有用Nginx执行php快了。  
 但是查询军哥lnmp安装包官网得出，LNMPA不能直接降级回LNMP。  
 这下蛋疼了，这坑爹的LNMPA。  
 于是继续翻阅，找到军哥提供的一种解决办法，相当于卸载LNMPA再重新安装LNMP。  
+<!--more-->
 1、备份MySQL数据库  
 2、ssh登录服务器，运行  
 {% highlight sh %}

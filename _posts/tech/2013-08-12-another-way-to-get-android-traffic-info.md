@@ -2,11 +2,11 @@
 layout: default
 title: 获取Android网速的另一种方法
 category: tech
-summary: 之前，在LOSP4.2上使用的是Android自带的接口来实现获取网速并显示在通知栏，可是到了4.3以后发现这个接口无论如何，返回值都是-1，无奈之下只得另寻办法<br />功夫不负有心人，我还是找到了一个方法。在Linux中，/proc/net/dev 这个路径，保存了当前网络的所有状态，我们把它用cat命令读取出来，格式是这样的：
 ---
 之前，在LOSP4.2上使用的是Android自带的接口来实现获取网速并显示在通知栏，可是到了4.3以后发现这个接口无论如何，返回值都是-1，无奈之下只得另寻办法
 
 功夫不负有心人，我还是找到了一个方法。在Linux中， __/proc/net/dev__ 这个路径，保存了当前网络的所有状态，我们把它用cat命令读取出来，格式是这样的：
+<!--more-->
 > Inter-|   Receive                                                |  Transmit  
 >  face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed  
 >     lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0  

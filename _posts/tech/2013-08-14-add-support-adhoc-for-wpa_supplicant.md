@@ -2,12 +2,11 @@
 layout: default
 title: 给Android wpa_supplicant 添加Ad-Hoc支持
 category: tech
-summary: 不少人喜欢使用电脑建立虚拟热点给手机分享网络连接，这种热点叫做 <strong>Ad-Hoc</strong> 。但在Android中，该热点形式并不被支持，不能扫描到任何 <strong>Ad-Hoc</strong> 热点<br />一些厂商和ROM开发者使用修改内核或者修改frameworks的方法来支持 <strong>Ad-Hoc</strong> ，但是，内核源码不是所有厂商都开放的，frameworks部分代码修改又太过麻烦，而 <strong>wpa_supplicant</strong> 这种修改方法，又在Android 4.0之后再也无人维护，之前的人又不开源……
 ---
 不少人喜欢使用电脑建立虚拟热点给手机分享网络连接，这种热点叫做 __Ad-Hoc__ 。但在Android中，该热点形式并不被支持，不能扫描到任何 __Ad-Hoc__ 热点
 
 一些厂商和ROM开发者使用修改内核或者修改frameworks的方法来支持 __Ad-Hoc__ ，但是，内核源码不是所有厂商都开放的，frameworks部分代码修改又太过麻烦，而 __wpa\_supplicant__ 这种修改方法，又在Android 4.0之后再也无人维护，之前的人又不开源……
-
+<!--more-->
 经过我在Google上的一番搜索，我找到了一个在Android 2.3( __wpa\_supplicant\_5__ ) 时代可用的patch，但用在目前的 __wpa\_supplicant\_8__ 上已经无效，无法成功patch，不过至少让我知道了修改支持Ad-Hoc的原理。
 
 首先我们进入wpa\_supplicant_8目录中的wpa\_supplicant也就是源码目录

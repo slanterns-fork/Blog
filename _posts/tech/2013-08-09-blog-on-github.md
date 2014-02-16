@@ -2,12 +2,11 @@
 layout: default
 title: 在GITHUB上写博客
 category: tech
-summary: GITHUB是一个免费的代码托管平台，提供给程序员一个代码共享、托管的空间，我的LOSP项目和国外的著名的CyanogenMod等项目就是托管于GITHUB。<br />很多程序员都有这样一个需求，那就是为他们的项目建立一个主页。因此GITHUB就推出了这样一项服务，只要你是GITHUB的用户，就可以在GITHUB上建立自己的主页。
 ---
 GITHUB是一个免费的代码托管平台，提供给程序员一个代码共享、托管的空间，我的LOSP项目和国外的著名的CyanogenMod等项目就是托管于GITHUB。
 
 很多程序员都有这样一个需求，那就是为他们的项目建立一个主页。因此GITHUB就推出了这样一项服务，只要你是GITHUB的用户，就可以在GITHUB上建立自己的主页。
-
+<!--more-->
 这个功能的唯一缺点是仅支持静态页面，不过应对方法很快应运而生，那就是jekyll。这是一个用Ruby脚本语言编写的静态页面生成器，可以用来在GITHUB上生成博客等页面，而GITHUB也官方支持了这个项目，只要你上传jekyll结构的项目目录，GITHUB就会自动将其生成网站并发布。虽然它必须通过Markdown标记语言来写作，但是这对使用GITHUB的程序员们来说，并非什么难事。
 
 当然，我并不建议你只把GITHUB用来建站，因为做人要有点节操，GITHUB PAGES是给托管在其上的项目提供的免费网页服务，并非免费空间，所以……  

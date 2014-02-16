@@ -1,8 +1,7 @@
 ---
 layout: default
 title: 小记触摸版CWM Recovery的制作
-category: tech
-summary: 众所周知，坑爹的CWM Touch木有开放源代码……<br />但是我不甘心，我要给米1做触摸Recovery。<br />于是在Github上寻找，一直没有找到开源的。<br />无意间在深度OS的GITHUB上找到了一部分的触摸源代码。
+category: tech。
 ---
 众所周知，坑爹的CWM Touch木有开放源代码……  
 但是我不甘心，我要给米1做触摸Recovery。  
