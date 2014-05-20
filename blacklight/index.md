@@ -13,6 +13,6 @@ __下载地址__
 v1.0.0a1: <http://pan.baidu.com/share/link?shareid=1786346896&uk=2703971393>
 
 __截图__  
-![1]({{ site.baseurl }}/res/bl1.png)  
-![2]({{ site.baseurl }}/res/bl2.png)  
-![3]({{ site.baseurl }}/res/bl3.png)
+![1]({{ site.baseurl }}res/bl1.png)  
+![2]({{ site.baseurl }}res/bl2.png)  
+![3]({{ site.baseurl }}res/bl3.png)
