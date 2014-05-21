@@ -5,7 +5,7 @@ title: BlackLight
 
 __什么是BlackLight?__  
 BlackLight 是由我开发的一款Android上的新浪微博第三方轻量级客户端。我开发这个客户端(又造了一个轮子)旨在做一个真正自己喜欢的客户端。缓存机制，UI逻辑，一切都不过为了使微博“刷”起来更畅快，更舒服。  
-BlackLight在GPLv3开源协议下发布全部源代码: <htyps://github.com/PeterCxy/BlackLight>
+BlackLight在GPLv3开源协议下发布全部源代码: <https://github.com/PeterCxy/BlackLight>
 
 __特别说明__  
 由于新浪微博不再接受第三方客户端API申请，因此BlackLight采用“黑魔法”，即使用其他应用的高权限API接口来获取微博数据。这也意味着BlackLight没有自己的微博尾巴。  
