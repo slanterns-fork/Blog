@@ -5,7 +5,7 @@ category: tech
 ---
 自从上次Oracle状告Google以后，Android官网上推荐的JDK就改成OpenJDK7了，但目前只有AOSP的master分支和l-preview分支及以后的版本才支持用OpenJDK7编译。本着“为未来做准备”的态度，我尝试用OpenJDK7编译了一次Android 4.4(KitKat)，当然遇到了很多问题。
 
-<!-- more -->
+<!--more-->
 
 __libcore/libdvm & libcore/libart__  
 报错位置: 对应目录下的 *src/main/java/java/lang/Enum.java*  
