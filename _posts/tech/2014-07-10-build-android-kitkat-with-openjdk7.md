@@ -72,7 +72,7 @@ __frameworks/base__
   	../opt/net/voip/src/java/android/net/sip
 {% endhighlight %}
 
-报错位置2: *packages/SystemUI/src/com/android/systemui/statusbar/SystemBars.java* (无参构造器缺失)
+报错位置2: *packages/SystemUI/src/com/android/systemui/statusbar/SystemBars.java* (无参构造器缺失)  
 解决方法2: (这个解决方法不完美，是个dirty fix)  
 {% highlight java %}
  import com.android.systemui.R;
