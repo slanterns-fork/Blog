@@ -9,7 +9,7 @@ category: tech
 
 __libcore/libdvm & libcore/libart__  
 报错位置: 对应目录下的 *src/main/java/java/lang/Enum.java*  
-解决方法: 感谢 [秋叶随风]<http://www.3rdos.com/>  
+解决方法: 感谢 [秋叶随风](http://www.3rdos.com/)  
 {% highlight java %}
      public final int compareTo(E o) {
  -        return ordinal - o.ordinal;
@@ -20,13 +20,13 @@ __libcore/libdvm & libcore/libart__
 
 __frameworks/opt/telephony__  
 报错位置: *src/java/com/android/internal/telephony/gsm/GSMPhone.java*  
-解决方法: 感谢 [秋叶随风]<http://www.3rdos.com/>  
+解决方法: 感谢 [秋叶随风](http://www.3rdos.com/)  
 > 删除 public GSMPhone (Context context, CommandsInterface ci, PhoneNotifier notifier, boolean unitTestMode) 构造器中的 if (DBG_PORT) {}语句块即可
 
 
 __packages/apps/Gallery2__  
 报错位置: *src/com/android/gallery3d/util/LinkedNode.java*  
-解决方法: 感谢 [秋叶随风]<http://www.3rdos.com/>  
+解决方法: 感谢 [秋叶随风](http://www.3rdos.com/)  
 {% highlight java %}
  public class LinkedNode {
  -    private LinkedNode mPrev;
