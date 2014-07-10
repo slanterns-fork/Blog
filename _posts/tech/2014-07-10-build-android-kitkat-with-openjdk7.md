@@ -5,6 +5,8 @@ category: tech
 ---
 自从上次Oracle状告Google以后，Android官网上推荐的JDK就改成OpenJDK7了，但目前只有AOSP的master分支和l-preview分支及以后的版本才支持用OpenJDK7编译。本着“为未来做准备”的态度，我尝试用OpenJDK7编译了一次Android 4.4(KitKat)，当然遇到了很多问题。
 
+<!-- more -->
+
 __libcore/libdvm & libcore/libart__  
 报错位置: 对应目录下的 *src/main/java/java/lang/Enum.java*  
 解决方法: 感谢 [秋叶随风]<http://www.3rdos.com/>  
@@ -15,10 +17,12 @@ __libcore/libdvm & libcore/libart__
       }
 {% endhighlight %}
 
+
 __frameworks/opt/telephony__  
 报错位置: *src/java/com/android/internal/telephony/gsm/GSMPhone.java*  
 解决方法: 感谢 [秋叶随风]<http://www.3rdos.com/>  
 > 删除 public GSMPhone (Context context, CommandsInterface ci, PhoneNotifier notifier, boolean unitTestMode) 构造器中的 if (DBG_PORT) {}语句块即可
+
 
 __packages/apps/Gallery2__  
 报错位置: *src/com/android/gallery3d/util/LinkedNode.java*  
@@ -34,9 +38,11 @@ __packages/apps/Gallery2__
           mPrev = mNext = this;
 {% endhighlight %}
 
+
 __build__  
 报错位置: *各种makefile*  
 解决方法: 修改太多，请见 <https://github.com/LOSP/android_build/commits/kk>  大体就是修改需求的java版本号来解决问题
+
 
 __external/chromium_org__  
 报错位置: (这个可能并不是所有人都会遇到)*base/android/jni_generator/jni_generator.py*  
@@ -51,6 +57,7 @@ __external/chromium_org__
                            stdout=subprocess.PIPE,
                            stderr=subprocess.PIPE)
 {% endhighlight %}
+
 
 __frameworks/base__  
 报错位置1: *out/target/common/obj/JAVA_LIBRARIES/android_stubs_current_intermediates/src/android/telephony/gsm/SmsManager.java*  
@@ -90,8 +97,10 @@ __frameworks/base__
           }
  {% endhighlight %}
  
+ 
  __external/proguard__  
  报错原因: 默认的proguard是4.4版本，不支持Java7  
  解决方法: revert commit *9f606f95f03a75961498803e24bee6799a7c0885* (此操作将升级proguard到4.7) (当然，会遇到冲突，你只要保留"====="后面的内容就可以了)
+ 
  
  以上就是我编译的时候遇到的所有错误，大家可以参考。当然，有些错误很奇葩，比如SystemBar那个错误，根本就不该发生。不管他了，反正我解决了。
