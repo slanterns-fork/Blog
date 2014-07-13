@@ -1,14 +1,18 @@
-            <article class="alist">
-                <div class="alist-time">
-                    <span class="alist-year">{{ post.date | date: "%Y" }}</span>
-                    <span class="alist-date">{{ post.date | date: "%m.%d" }}</span>
-                </div>
-                <div class="alist-container">
-                    <h2 class="alist-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                    <div class="alist-meta">分类: {{ post.categories }} / 发表于: {{ post.date | date: "%Y 年 %m 月 %d 日" }}</div>
-                    <div class="alist-content">
-                        {{ post.content | split:'<!--more-->' | first }} <br /> [......]
-                        <p class='read-more'><a href="{{ post.url }}">阅读全文</a></p>
-                    </div>
-                </div>
-            </article>
+        <!-- Post start -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-2 container time">
+            <div class="jumbotron">
+              <p>{{ post.date | date: "%Y" }}</p>
+              <h3>{{ post.date | date: "%m.%d" }}</h3>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 container">
+            <div class="jumbotron">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.content | split:'<!--more-->' | first }}</p>
+              <p>...</p>
+              <p class="align-right"><a class="btn btn-primary btn-sm" role="button" href="{{ post.url }}">阅读全文</a></p>
+            </div><!--/.jumbotron-->
+          </div><!--/.container-->
+        </div><!--/.row-->
+        <!-- Post end -->
