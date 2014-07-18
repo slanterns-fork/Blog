@@ -1,4 +1,4 @@
- ---
+---
 layout: default
 title: FUCK THE THIEF!
 category: life
