@@ -1,0 +1,32 @@
+{% include header.html %}
+     <div class="col-xs-12 col-sm-9">
+        <ol class="breadcrumb">
+          <li><a href="{{ site.baseurl }}index.html">TypeBlog</a></li>
+	  <li><a href="{{ site.baseurl }}gentoo">Gentoo中文手册</a></li>
+          <li class="active">{{ page.title }}</li>
+        </ol><!--/.breadcrumb-->
+        <div class="page-header">
+            <h1>{{ page.title }}</h1>
+        </div><!--/.page-header-->
+        <!-- Page content -->
+        <div class="page-content">
+          <p>{{ content }}</p>
+        </div><!--/.page-content-->
+        <div id="disqus_thread">
+        </div>
+        <script type="text/javascript">
+             var disqus_shortname = 'hxbdx';
+
+             var disqus_url = "{{ site.url }}{{ page.url }}";
+
+             (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             })();
+        </script>
+        <noscript>请打开JavaScript来浏览<a href="http://disqus.com/?ref_noscript">DisQus 评论.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">请等待评论加载</a>
+      </div>
+      {% include sidebar.html %}
+{% include footer.html %}
