@@ -224,6 +224,10 @@ $ buck build debug
 [BlackLight](https://github.com/PeterCxy/BlackLight) 我的配置中包含了预编译jar、非预编译的有资源的库和无资源的库、还有两个编译规则：调试版和正式发布版。
 [ChatterBox](https://gitcafe.com/neo4026/ChatterBox)
 
+### 注意事项
+
+由于 `buck` 的资源合并机制不同，所以类似于 `case R.id.xxx` 的写法将会报错，请改成 `if-else` 语句。
+
 ### 鸣谢
 
 [但丁不淡定](http://neo4026.gitcafe.com/build-android-app-with-buck/)
