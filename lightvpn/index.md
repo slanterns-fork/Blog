@@ -20,17 +20,18 @@ Q: 连不上/连上了不能上网怎么办?
 A: 尝试勾选 “Mppe 加密”一项。如果仍然不行，请在此提交BUG报告。
 
 __说明__  
-本软件需要ROM自带完整的busybox支持，如果没有请用busybox安装器。  
 由于本屌丝暂时手头只有一部手机，所以很多问题都测试不到，如果不能用，请不要怪我……我找到更多测试机以后会一个个解决的。
 
 __更新历史__  
+v1.1: apk内置需要的可执行文件，不再需要busybox支持，只需root权限。
+
 v1.0: 第一个版本
 
 __源代码__  
 <https://github.com/PeterCxy/LightVPN>
 
 __下载地址__  
-v1.0: <http://www.androidfilehost.com/?fid=23501681358562081>  
+v1.1: <http://www.androidfilehost.com/?fid=23578570567717939>  
 下载说明:  
 1. 点击下载链接进入下载页面  
 2. 点击"Begin Download"  
