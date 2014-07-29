@@ -33,9 +33,12 @@ autocmd FileType java,javascript,jsp inoremap <buffer> . .<C-X><C-O><C-P>
 
 " android.jar
 let $ANDROID_JAR = '/path/to/your/android.jar'
+
+" cache
+let $JAVACOMPLETE_CACHE = '~/.jcc'
 {% endhighlight %}
 
-解释一下，前三行代码是对java文件开启javacomplete自动完成插件，第四行的功能是把触发自动完成的快捷键设为 `.`，方便使用。最后一行的作用是设置 `android.jar` 的路径，请将其修改为指向您的sdk中的 `android.jar`
+解释一下，前三行代码是对java文件开启javacomplete自动完成插件，第四行的功能是把触发自动完成的快捷键设为 `.`，方便使用。`$ANDROID_JAR` 一行的作用是设置 `android.jar` 的路径，请将其修改为指向您的sdk中的 `android.jar`, `$JAVACOMPLETE_CACHE` 一行的作用是设置缓存路径为 `~/.jcc`. 如果你在写代码时发现自动完成有问题，可以尝试删除缓存目录再试。
 
 #### 配置你的项目
 
