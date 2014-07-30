@@ -81,11 +81,11 @@ ssh git@github.com
 
 如果出现提示 `Hi, xxx! You've successfully authenticated, but GitHub does not provide shell access` ，那么就说明你已经成功了。
 
-现在你已经可以使用 `git` 命令来克隆项目了，我们先举个例子，假如你要克隆 <https://github.com/PeterCxy/BlackLight> 项目到你的工作目录，那么请在终端里运行：
+现在你已经可以使用 `git` 命令来克隆项目了，我们先举个例子，假如你要克隆 <https://github.com/PaperAirplane-Dev-Team/BlackLight> 项目到你的工作目录，那么请在终端里运行：
 
 {% highlight sh %}
 cd work
-git clone git@github.com:PeterCxy/BlackLight.git
+git clone git@github.com:PaperAirplane-Dev-Team/BlackLight.git
 {% endhighlight %}
 
 这样即可克隆成功。注意，URL格式一定要使用 `git@github.com:Username/Repository`，否则将失败。
@@ -218,7 +218,7 @@ fi
 echo "Apk built for $1: ${PWD}/build/bin/build.apk"
 {% endhighlight %}
 
-我的项目托管在 <https://github.com/PeterCxy/BlackLight> ，上面的脚本也在项目里面，可以直接编译成功。你可以关注我的项目的最新更新来获取最新的编译脚本示例。
+我的项目托管在 <https://github.com/PaperAirplane-Dev-Team/BlackLight> ，上面的脚本也在项目里面，可以直接编译成功。你可以关注我的项目的最新更新来获取最新的编译脚本示例。
 
 这个脚本仅仅是一个示例，不能直接用来编译你的项目。你需要修改 `Configurations` 段 以及 `Sign` 段里面的参数才能成功编译。你可以参考我的 `BlackLight` 项目信息并对比你自己的项目信息来修改这个脚本。主要就是引入资源文件、库源码、预编译库、签名文件这四项。如果你修改脚本时遇到问题，欢迎在本文下面留言或通过社交渠道联系我，我会尽力给予帮助。
 
