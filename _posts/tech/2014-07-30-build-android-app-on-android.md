@@ -234,7 +234,7 @@ echo "Apk built for $1: ${PWD}/build/bin/build.apk"
 
 #### 潜在错误
 
-在运行 `dx --dex` 的时候可能发城 `OutOfMemoryError` ，此时你只需要编辑 `/sdcard/env/tools/dx` 文件（对，它是文本文件），修改最大内存限制即可。
+在运行 `dx --dex` 的时候可能发生 `OutOfMemoryError` ，此时你只需要编辑 `/sdcard/env/tools/dx` 文件（对，它是文本文件），修改最大内存限制即可。
 
 #### 意义
 
