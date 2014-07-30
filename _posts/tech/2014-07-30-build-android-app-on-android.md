@@ -236,7 +236,15 @@ echo "Apk built for $1: ${PWD}/build/bin/build.apk"
 
 在运行 `dx --dex` 的时候可能发城 `OutOfMemoryError` ，此时你只需要编辑 `/sdcard/env/tools/dx` 文件（对，它是文本文件），修改最大内存限制即可。
 
+#### 意义
+
+* 可以让学生党用手机做开发
+* 可以帮助你了解Android App的结构及编译过程
+* 可以拯救不开发会死星人
+* 可以帮助你的手机顺利晋级为暖手宝，居家旅行必备！
+
 #### 鸣谢
 
 * Terminal IDE
 * Apktool
+* [SSH and GIT on Android with Terminal IDE](http://tinyrobot.co.uk/blog/ssh-and-git-on-android-with-terminal-ide/)
