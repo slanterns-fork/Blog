@@ -20,6 +20,7 @@ category: tech
 #### 准备
 
 * 为了简化教程，我们默认把开发环境放在 `/sdcard/env` ，工作目录为 `/sdcard/work`
+* 安装 `Apktool` 手机版（没错，这是依赖）
 * 创建 `/sdcard/env` 和 `/sdcard/work` 两个目录
 * 下载我打包好的环境: [env.zip](http://www.androidfilehost.com/?fid=23578570567720305)
 * 把下载好的压缩包内容全部解压到 `/sdcard/env`
