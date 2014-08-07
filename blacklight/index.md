@@ -82,6 +82,7 @@ v1.0.0a1: 初始化版本
 
 __下载地址__  
 Play商店: <https://play.google.com/store/apps/details?id=us.shandian.blacklight>  
+Play商店测试计划(加入后可体验最新测试版BlackLight): <https://play.google.com/apps/testing/us.shandian.blacklight>
 
 __截图__  
 ![1]({{ site.baseurl }}res/bl1.png)  
