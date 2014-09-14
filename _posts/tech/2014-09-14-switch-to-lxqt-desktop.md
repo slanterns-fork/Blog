@@ -56,6 +56,10 @@ Compiz的配置可以在 `Preferences->CompizConfig Settings Manager` 里面找�
 
 保存后可以测试一下， `Print Screen` 键是截取整个屏幕， `Shift + Print Screen` 是截取当前窗口， `Ctrl + Print Screen` 是截取自定义矩形区域。非常方便。
 
+### 网络管理器
+
+直接使用 `network-manager-applet`, 然后添加到LXQt的Panel里面即可。
+
 ### 截屏欣赏
 
 ![lxqt1]({{ site.baseurl }}res/lxqt1.png =600x)  
