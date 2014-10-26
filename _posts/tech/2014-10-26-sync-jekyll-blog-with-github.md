@@ -4,7 +4,7 @@ title: 将服务端的Jekyll博客与GitHub Repo同步
 category: tech
 ---
 
-我的这个博客，以前使用的是Github Pages，后来用比尔盖子的VPS作服务端。当时我是写了个 `shell` 脚本定期循环 `git pull`。现在我换用自己的DigitalOcean VPS，认为以前的方法不够优雅(特别是定时循环有些浪费资源)，所以我换用另一种方法。
+我的这个博客，以前使用的是Github Pages，后来用比尔盖子的VPS作服务端，而博客的版本库仍然存储在GitHub。当时我是写了个 `shell` 脚本定期循环 `git pull` 来实现与GitHub版本库同步，比较暴力。现在我换用自己的DigitalOcean VPS，认为以前的方法不够优雅(特别是定时循环有些浪费资源)，所以我换用另一种方法。
 
 <!--more-->
 
@@ -12,7 +12,9 @@ category: tech
 
 我注意到GitHub有个 `Web Hook` 功能，可以在发生某些git事件的时候调用一个远程回调地址。这正是我需要的。
 
-现在我们只需要实现一个服务端回调就可以了。由于我以前Python用的少，所以我决定用Python练练手。只需安装 `python python-pip spawn-fcgi` 几个软件包并使用 `pip install web.py` 和 `pip install flup` 即可。
+现在思路就来了：我们只需要让GitHub在远程版本库更新的时候向服务器发送请求，服务器接到请求以后就执行 `git pull` 和 `jekyll build`, 不就可以了？而且这样更新才是真正的 `即时更新` !
+
+那么我们只需要实现一个服务端回调就可以了。由于我以前Python用的少，所以我决定用Python练练手。只需安装 `python python-pip spawn-fcgi` 几个软件包并使用 `pip install web.py` 和 `pip install flup` 即可。
 
 需要先实现一个Python脚本。可以参考 <http://webpy.org/cookbook/fastcgi-nginx> 配置好nginx并按照例子写好hello world。以下内容均以此为基础修改。假设你在Nginx绑定的域名为`your.com`
 
