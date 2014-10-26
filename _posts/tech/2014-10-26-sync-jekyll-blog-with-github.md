@@ -20,30 +20,39 @@ category: tech
 
 接下来需要加入对GitHub事件的响应。有几个关键的地方
 
-1. 引入 `subprocess`
-2. 需要在 `urls` 变量中加入你要设定的hook地址。地址的名称可以随便写，但等会要把它填入GitHub使其生效。假设hook地址名就叫hook，那么urls变量应该是  
+1 引入 `subprocess`  
+2 需要在 `urls` 变量中加入你要设定的hook地址。地址的名称可以随便写，但等会要把它填入GitHub使其生效。假设hook地址名就叫hook，那么urls变量应该是
+
 {% highlight python %}
 urls = (
     "/hook", "github-push",
     "/(.*)", "hello"
 )
-{% endhighlight %}  
+{% endhighlight %}
+
 如果有多个网站请添加多条。`github-push` 定义的是收到数据时要调用的类名，必须与下面新建的类保持一致。不同的网站的hook请使用不同的类名。
-3. 为了调用 `git` 和 `jekyll`, 我写了个shell脚本，传入要更新的网站名称即可自动执行更新。在python中，应该这样调用  
+
+3 为了调用 `git` 和 `jekyll`, 我写了个shell脚本，传入要更新的网站名称即可自动执行更新。在python中，应该这样调用
+
 {% highlight python %}
 def runscript(name):
     subprocess.call(['/path/to/your/shell/script', name])
-{% endhighlight %}  
-这是一个函数，它的作用是启动shell脚本并传入网站名称这个参数(如果你只有一个网站就不需要了)。等会我们将在处理过程中调用。  
+{% endhighlight %}
+
+这是一个函数，它的作用是启动shell脚本并传入网站名称这个参数(如果你只有一个网站就不需要了)。等会我们将在处理过程中调用。
+
 shell脚本的实现很简单，我就不赘述了 
-4. 建立一个新的class  
+
+4 建立一个新的class
+
 {% highlight python %}
 class github-hook:
     def POST(self):
         runscript("name-of-your-website")
         web.ctx.status = "200 OK"
         return "OK"
-{% endhighlight %}  
+{% endhighlight %}
+
 这里是处理请求并执行更新脚本。类名请与 `urls` 里面的定义一致。多个网站可以添加多个类。这里只处理了POST，因为GitHub hook是post形式。
 
 现在你已经完成了hook，将它添加到GitHub Repo的 `Webhook` 里面(按照本文的设定，填入的地址应该是`http://your.com/hook`)，然后就可以调试啦。
