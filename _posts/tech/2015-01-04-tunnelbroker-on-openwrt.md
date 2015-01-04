@@ -33,9 +33,9 @@ category: tech
 
 幸好，`Tunnelbroker` 提供了方便的API接口
 
->  https://ipv4.tunnelbroker.net/nic/update?hostname=\<TUNNEL_ID\>
+>  https://ipv4.tunnelbroker.net/nic/update?hostname=<TUNNEL_ID>
 
-其中， `\<TUNNEL_ID\>` 为隧道的编号，在网页上可以查到。使用该API需要登录，用户名为官网用户名，密码为隧道页面的 `Advanced` 标签下可以查到的 `Update Key`。下文中我们以 `\<ID\>` 代替隧道编号， `\<USR\>` 代替用户名，`\<PWD\>` 代替更新密钥。
+其中， `<TUNNEL_ID>` 为隧道的编号，在网页上可以查到。使用该API需要登录，用户名为官网用户名，密码为隧道页面的 `Advanced` 标签下可以查到的 `Update Key`。下文中我们以 `<ID>` 代替隧道编号， `<USR>` 代替用户名，`<PWD>` 代替更新密钥。
 
 我前面已经说过，OpenWRT自带的那个更新接口已经失效了，不知道是什么原因。但是，别忘了OpenWRT是智能路由器系统，因此我们可以自己解决这个问题。
 
