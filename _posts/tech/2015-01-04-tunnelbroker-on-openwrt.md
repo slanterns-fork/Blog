@@ -51,7 +51,7 @@ curl -k -u <USR>:<PWD> https://ipv4.tunnelbroker.net/nic/update?hostname=<ID>
 
 解释一下上面那个脚本， `sleep` 用来等待一定时间以防失败， `curl` 的参数 `-k` 用于忽略SSL证书(因为OpenWRT内置的信任证书很少)， `-u` 用于自动登录。
 
-同时，建议用 `nslookup` 查询 `ipv4.tunnelbroker.net` 的IP地址，加入 `/etc/hosts`，防止由DNS解析失败带来的更新出错。如果你挂了shadowsocks，还应该把这个IP放进 `ignore.list` 里面，否则无法正常更新IP。
+同时，建议用 `nslookup` 查询 `ipv4.tunnelbroker.net` 的IP地址，加入 `/etc/hosts`，防止由DNS解析失败带来的更新出错。如果你挂了shadowsocks，还应该把这个IP放进 `ignore.list` 里面，否则无法正常更新IP。如果有强迫症，还可以把隧道对端IP也加入shadowsocks的白名单里面，虽然这样做没什么用。
 
 ### 测试
 
