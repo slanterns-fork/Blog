@@ -1,6 +1,8 @@
 baseurl: /
 pygments: true
 title: Typeblog
+name: Typeblog
+description: Typing....
 url: http://typeblog.net
 paginate: 5
 disqus_shortname: hxbdx
