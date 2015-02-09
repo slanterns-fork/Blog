@@ -3,7 +3,7 @@ pygments: true
 title: Typeblog
 name: Typeblog
 description: Typing....
-url: http://typeblog.net
+url: https://typeblog.net
 paginate: 5
 disqus_shortname: hxbdx
 paginate_path: "page:num"
