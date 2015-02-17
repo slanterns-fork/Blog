@@ -58,3 +58,7 @@ curl -k -u <USR>:<PWD> https://ipv4.tunnelbroker.net/nic/update?hostname=<ID>
 保存所有配置，重启路由器，待拨号成功以后，打开 <https://ipv6.google.com> ，能访问则成功。
 
 经测试，IPv6隧道的速度并不是很快，适用于增加bigger。但是由于目前某wall在IPv6并没有很大作用，所以这倒是可以做一些羞羞的事情。同时，IPv6地址资源多到炸裂，隧道会直接给你分配一个 `/64` 地址块，难道你不觉得可以用来......?
+
+### 后记
+
+`TunnelBroker` 现已确认被 `万里长城` 所屏蔽。蜡烛。
