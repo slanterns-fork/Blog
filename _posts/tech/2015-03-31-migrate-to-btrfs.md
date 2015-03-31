@@ -11,6 +11,8 @@ category: tech
 
 而 `btrfs` 的转换过程才是最最痛苦的，这个我等下再吐槽了……
 
+<!--more-->
+
 ### 准备内核
 
 由于我使用的是 `Gentoo Linux`, 所以要手工编译内核，只需要开启 `File Systems` 下的 `Btrfs` 一项再重新编译即可。
