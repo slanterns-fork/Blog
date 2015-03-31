@@ -40,8 +40,27 @@
     <script lang="text/javascript">
         window.onload = function() {
             $.material.init();
+            $(window).trigger("resize");
         };
+
+        $(window).on("resize", function() {
+            $("html", "body").height($(window).height());
+            $("#bkg").height($(window).height());
+            $("#fore").height($(window).height() - $(".navbar").height() - 10);
+            $("#fore").css("margin-top", $(".navbar").outerHeight())
+                      .css("padding-top", 10)
+                      .css("padding-left", $(window).width() / 10)
+                      .css("padding-right", $(window).width() / 10);
+            $(".header-panel").css("margin-top", $(".navbar").height())
+                              .width($(window).width());
+            $(".page-content").css("margin-top", $(".header-panel").height());
+            $("#page-title").css("margin-left", $(window).width() / 10 + 10);
+
+        }).trigger("resize");
     </script>
+
+    {% if page.title != site.title %}
+    {% endif %}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,7 +70,7 @@
 </head>
 
 <header>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-material-teal" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -73,8 +92,6 @@
               <li><a href="{{ site.baseurl }}blacklight">BlackLight</a></li>
               <li><a href="{{ site.baseurl }}lightvpn">LightVPN</a></li>
               <li class="divider"></li>
-	      <li><a href="{{ site.baseurl }}gentoo">Gentoo中文手册</a></li>
-	      <li class="divider"></li>
               <li><a href="https://github.com">GitHub</a></li>
             </ul>
           </li>
@@ -86,8 +103,15 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  <div class="header-panel well-material-teal shadow-z-2" style="z-index: 0; position: absolute; top: 0;">
+      {% if page.title != site.title %}
+      <h1 id="page-title" style="color: white;">{{ page.title }}</h1>
+      {% endif %}
+  </div>
 </header>
 
 <body>
-  <div class="container">
+  <div id="bkg" class="container-fluid" style="z-index: 0; height: 666px; position: absolute; top: 0;">
+  </div>
+  <div id="fore" class="container-fluid" style="z-index: 2; position: absolute; top: 0; overflow: auto; height: 666px">
     <div class="row">
