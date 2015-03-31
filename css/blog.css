@@ -80,17 +80,8 @@
     top: 0;
     left: 10px;
     display:block;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow: hidden;
   }
-}
-
-footer {
-  padding: 40px 0;
-  color: #999;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
 }
 
 /*
@@ -99,7 +90,4 @@ footer {
 */
 body {
   padding-top: 70px;
-}
-footer {
-  padding: 30px 0;
 }
