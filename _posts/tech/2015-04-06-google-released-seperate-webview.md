@@ -12,7 +12,7 @@ category: tech
 
 `WebView` 是 `Android` 系统内置的供第三方App调用的浏览器组件。更严格地说，它仅仅是内置的渲染引擎的一个封装。在 `Android 4.4` 以前， `WebView` 的后端是经过轻微修改的 `WebKit`，其源码位于 `Android` 源代码的 `external/webkit` 下，基本上就是原 `WebKit` 的一个拷贝。从 `Android 4.4` 开始，这个 `WebKit` 后端被替换成了谷歌自己做的 `Chromium`，就是那个版本号狂魔。并且，在替换为 `Chromium` 的同时，`WebView` 的实现还被从 `frameworks/base` 中解耦出来，移动到 `frameworks/webview` 下，但仍然会被编译为 `framework` 的一部分。`frameworks/base` 中只留下了与 SDK 有关的接口。
 
-到了 `Android 5.0`，`WebView` 又发生了变化。一是 `Chromium` 升级到了37，二是 `frameworks/webview` 内的结构发生了变化。原来作为 `framework` 的一部分被引入的 `chromium` 包又被修改，变成了编译为一个独立的 `apk` ，包名是 `com.android.webview` (详见 [CyanogenMod GitHUb](https://github.com/CyanogenMod/android_frameworks_webview/blob/cm-12.0/chromium/AndroidManifest.xml)) 但是没有用户界面，只是在开机时由 `framework` 根据包名自动载入(这个载入是将class载入到framework中，因此仅仅把自带`WebView`这个apk给禁用掉是不会出现任何问题的)。这就是 `WebView` 独立更新的基础。
+到了 `Android 5.0`，`WebView` 又发生了变化。一是 `Chromium` 升级到了37，二是 `frameworks/webview` 内的结构发生了变化。原来作为 `framework` 的一部分被引入的 `chromium` 包又被修改，变成了编译为一个独立的 `apk` ，包名是 `com.android.webview` (详见 [CyanogenMod GitHub](https://github.com/CyanogenMod/android_frameworks_webview/blob/cm-12.0/chromium/AndroidManifest.xml)) 但是没有用户界面，只是在开机时由 `framework` 根据包名自动载入(这个载入是将class载入到framework中，因此仅仅把自带`WebView`这个apk给禁用掉是不会出现任何问题的)。这就是 `WebView` 独立更新的基础。
 
 ### Why
 
