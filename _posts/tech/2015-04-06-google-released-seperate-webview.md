@@ -73,7 +73,7 @@ public class ModWebView implements IXposedHookZygoteInit
 
 要使用这个独立的 `WebView` ，要求是
 
-* >= Android 5.0
+* \>= Android 5.0
 * Google Nexus 官方推送ROM或国外厂商附带完整GMS的部分ROM或使用 `WebViewGoogle` 这一模块
 * 使用调用系统 `WebView` 的app
 
