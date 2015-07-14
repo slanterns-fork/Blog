@@ -18,13 +18,13 @@ category: tech
 
 创建机器人以后，你就可以通过设定的用户名查询到机器人并发起会话了。但是仅仅这样的话机器人是不会有任何反应的，我们还需要一个服务器，并使用服务端程序对Telegram机器人进行初始化。首先，Telegram的所有对机器人开放的API的URL前缀都是
 
-> https://api.telegram.org/bot<token>/
+> https://api.telegram.org/bot\<token\>/
 
 在这个URL后面加上要调用的API方法名称即可。所有API方法均支持 `GET` 和 `POST`
 
 首先我们要初始化机器人，让Telegram将机器人所收到的消息转发到服务器上。`Telegram` 支持两种方式，第一种是机器人服务器主动向Telegram发送查询请求，第二种是机器人服务器被动接受Telegram发来的请求。而我比较喜欢的是第二种，即使用 `WebHook` 的模式。按照官方的推荐做法，我们可以在服务器上监听像这样的URL
 
-> https://yourdomain/some/path/<token>
+> https://yourdomain/some/path/\<token\>
 
 必须是 __HTTPS__! 且不支持自己签的证书。
 
