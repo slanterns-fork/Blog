@@ -2,6 +2,7 @@
 layout: default
 title: Telegram Bot API 折腾记
 category: tech
+type: teal-color
 ---
 
 从 2015年6月24日 以后，`Telegram` 正式开始提供开放的 [机器人平台](https://core.telegram.org/bots)。实际上在这之前，`Telegram` 上已经有大量的 `Bots` 存在，只不过它们多数是使用 `telegram-cli` 实现的。但是这些机器人不能够与 `Telegram` 客户端的UI交互，不能够弹出可选项之类，而且也不能设置是否允许加入群组、是否能够查看所有消息等。而机器人平台具有一些特殊的API接口，比如说能够自定义用户可见的选项、可以在Telegram客户端中添加一个命令菜单等等。更重要的是，机器人API采用的是简单的 `http(s)` 协议，而不需要像以前那样自己实现一套 `MTProto`.

@@ -2,6 +2,7 @@
 layout: default
 title: Google 出手尝试解决 Android WebView 的碎片化
 category: tech
+type: broken-plane-pic
 ---
 
 最近可能不少人都在 `Google Play Store` 上发现了一个新的App: [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview) 根据解释，这个是 `Android` 内置的 `WebView` 的独立版本。很多人都下载安装了这个App，评论里也有各种奇(xia)葩(bai)评论，说是这个组件非常有效果。Google甚至还建立了一个社群用于发布最新的测试版 `WebView`。作为一个折腾党，我肯定不能而且没有错过这个App。倒是只有一个问题：`WebView` 这种组件如何能够独立出来？

@@ -1,117 +1,58 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="theme-color" content="#009688">
-
     <title>
-    {% if page.title != site.title %}
-    {{ page.title }} - {{ site.title }}
-    {% else %}
-    {{ site.title }}
-    {% endif %}
+        {% if page.title != site.title %}
+        {{ page.title }} - {{ site.title }}
+        {% else %}
+        {{ site.title }}
+        {% endif %}
     </title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Material -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css" rel="stylesheet">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="{{ site.baseurl }}images/touch/chrome-touch-icon-192x192.png">
 
-	<!-- RSS Feed -->
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Typeblog">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
-    <!-- Blog theme -->
-    <link href="{{ site.baseurl }}css/blog.css?rel={{ site.style_version }}" rel="stylesheet">
-    <!-- Syntax highlight -->
-    <link href="{{ site.baseurl }}css/syntax.css?rel={{ site.style_version }}" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="{{ site.baseurl }}images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
 
-    <script lang="text/javascript">
-        window.onload = function() {
-            $.material.init();
-            $(window).trigger("resize");
-        };
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
 
-        $(window).on("resize", function() {
-            $("body").height($(window).innerHeight());
-            $("#bkg").height($(window).innerHeight());
-            $("#fore").height($(window).height() - $(".navbar").height() - 10)
-                      .css("margin-top", $(".navbar").outerHeight())
-                      .css("padding-top", 10)
-                      .css("padding-left", $(window).width() / 10)
-                      .css("padding-right", $(window).width() / 10)
-            $(".header-panel").css("margin-top", $(".navbar").height())
-                              .width($(document).innerWidth());
-            $(".page-content").css("margin-top", $(".header-panel").height());
-            $("#page-title").css("margin-left", $(window).width() / 10 + 10);
-
-        }).trigger("resize");
-    </script>
-
-    {% if page.title != site.title %}
-    {% endif %}
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<header>
-  <nav class="navbar navbar-inverse navbar-fixed-top navbar-material-teal" role="navigation">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Typeblog</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ site.baseurl }}index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ site.baseurl }}blacklight">BlackLight</a></li>
-              <li><a href="{{ site.baseurl }}lightvpn">LightVPN</a></li>
-              <li class="divider"></li>
-              <li><a href="https://github.com">GitHub</a></li>
-            </ul>
-          </li>
-		  <li><a href="{{ site.baseurl }}feed.xml">RSS</a></li>
-          <li><a href="{{ site.baseurl }}about">About</a></li>
-          <li><a href="http://shandian.us">LOSP</a></li>
-		  <li><a href="https://blog.papdt.info/">纸飞机团队</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div class="header-panel well-material-teal shadow-z-2" style="z-index: 0; position: absolute; top: 0;">
-      {% if page.title != site.title %}
-      <h1 id="page-title" style="color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ page.title }}</h1>
-      {% endif %}
-  </div>
-</header>
-
-<body style="overflow: hidden;">
-  <div id="bkg" class="container-fluid" style="z-index: 0; height: 666px; position: absolute; top: 0;">
-  </div>
-  <div id="fore" class="container-fluid" style="z-index: 2; position: absolute; top: 0; overflow: scroll; height: 666px">
-    <div class="row">
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.lug.ustc.edu.cn/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}css/material.min.css?ver={{ site.style_version }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}css/styles.css?ver={{ site.style_version }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}css/pic.css?ver={{ site.style_version }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css?ver={{ site.style_version }}">
+  </head>
+  <body>

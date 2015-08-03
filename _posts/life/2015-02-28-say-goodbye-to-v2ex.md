@@ -2,6 +2,7 @@
 layout: default
 title: 向V2EX说再见
 category: life
+type: blue-grey-color
 ---
 嗯，这是一个很不幸的消息。如果你现在打开 <http://v2ex.com> ，你只会收到一个 `Connection Reset`。这样就完了？不不不，如果你打开 <http://just-type-anything-here.com/v2ex.com> ，你仍然会收到一个 `Connection Reset` 。
 

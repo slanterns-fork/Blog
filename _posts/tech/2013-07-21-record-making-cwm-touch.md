@@ -7,7 +7,7 @@ category: tech。
 但是我不甘心，我要给米1做触摸Recovery。  
 于是在Github上寻找，一直没有找到开源的。  
 无意间在深度OS的GITHUB上找到了一部分的触摸源代码。  
-<!--more-->
+
 看这个commit：<https://github.com/ShenduOS/android_bootable_recovery/commit/19866163c49297d1e6e6348d2db2aa38cac7ce55>  
 cherry-pick过来，编译，发现只能支持触摸按键操作，而且还不能触摸。  
 经过一番调试，把触摸消息事件号改为50，终于可以正常触摸了。可是感觉很不爽，只能用触摸按键操作。  

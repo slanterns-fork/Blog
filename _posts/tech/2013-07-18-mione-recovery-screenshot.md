@@ -5,7 +5,7 @@ category: tech
 ---
 首先你要找到一个ffmpeg，Windows下可以找到ffmpeg.exe，放到C:\Windows\system32，Linux下直接apt-get install ffmpeg.  
 然后你得有adb，不会就百度。  
-<!--more-->
+
 启动到recovery，切换到你要截图的页面  
 执行命令行：  
 Windows下：cd C:\  

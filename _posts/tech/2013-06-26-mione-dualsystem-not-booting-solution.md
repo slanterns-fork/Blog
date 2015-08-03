@@ -5,8 +5,8 @@ category: tech
 ---
 前段时间开始研究小米的自编译ROM，遇到一个很大的问题，就是系统二刷入以后卡白米。秋叶随风说修复了这个问题，但依然不能用。  
 经过研究发现，ramdisk里面，init.mione.syspart_system1.rc的第一行是on emmc-fs，而在cm10.1中并未定义emmc，导致系统二启动时不能正确触发启动事件。  
+
 删除emmc，测试，发现系统二启动正常，但系统不能自动调用mount_ext4.sh，导致澳网CWM的双挂载data功能无效。  
-<!--more-->
 于是继续折腾：  
 首先屏蔽掉init.mione.rc里面挂载/data和/cache的语句，然后在init.mione.syspart_system.rc和init.mione.syspart_system1.rc中，加入如下语句：  
 {% highlight sh %}

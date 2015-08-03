@@ -2,6 +2,7 @@
 layout: default
 title: 无聊迁移到Btrfs杂记
 category: tech
+type: brown-color
 ---
 前天，我 `小高考` (江苏学测) 完了。放假两天。回到家里感觉无聊没事做，欣然决定将我的整个磁盘迁移到 `btrfs` 上。也是打算用这两天时间来……算是在 `语数外` 三门轮番轰炸前的最后一次折腾吧。
 

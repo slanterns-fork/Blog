@@ -2,6 +2,7 @@
 layout: default
 title: 迁移到GPT+UEFI
 category: tech
+type: indigo-color
 ---
 
 我这台电脑的主板(H77)默认是打开 `UEFI` 的。但是两年前，装机的时候，因为当时我还是一个彻头彻尾的Linux小白，只会跟着 `Ubuntu Installer` 安装，而当时的 `Ubuntu Installer` 又恰好在UEFI模式下工作不正常，所以我就关了UEFI。后来我折腾 `ArchLinux` 和 `Gentoo Linux` 的时候，遭遇了各种由 `bootloader` 导致的问题，比如说 `GRUB` 跟我闹别扭死活不引导的奇葩问题。而 `UEFI` 模式可以不需要 `GRUB` 之流的引导程序，再加上我好奇~~不折腾会死~~的心理，我决定迁移到 `GPT + UEFI`

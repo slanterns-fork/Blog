@@ -1,31 +1,43 @@
 {% include header.html %}
-     <div class="col-xs-12 col-sm-9">
-        <!--<ol class="breadcrumb">
-          <li><a href="{{ site.baseurl }}index.html">TypeBlog</a></li>
-          <li class="active">{{ page.title }}</li>
-      </ol>
-        <div class="page-header">
-            <h1>{{ page.title }}</h1>
-        </div>-->
-        <!-- Page content -->
-        <div class="page-content jumbotron">
-          <p>{{ content }}</p>
-        </div><!--/.page-content-->
-        <div id="disqus_thread" class="jumbotron">
+<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+  <main class="mdl-layout__content">
+    <div class="demo-back">
+      <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{ site.baseurl }}" title="go back" role="button">
+        <i class="material-icons" role="presentation">arrow_back</i>
+      </a>
+    </div>
+    <div class="demo-blog__posts mdl-grid">
+      <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col {{ page.type }}">
+        <div class="mdl-card__media mdl-color-text--grey-50">
+          <h3>{{ page.title }}</h3>
+        </div>
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+          <div class="minilogo"></div>
+          <div>
+            <strong>PeterCxy</strong>
+            <span>typed...</span>
+          </div>
+        </div>
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+            {{ content }}
+        </div>
+        <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments" id="disqus_thread">
+            <noscript>请打开JavaScript来浏览<a href="http://disqus.com/?ref_noscript">DisQus 评论.</a></noscript>
+            <p>请等待评论加载</p>
         </div>
         <script type="text/javascript">
-             var disqus_shortname = 'hxbdx';
+            var disqus_shortname = 'hxbdx';
 
-             var disqus_url = "{{ site.url }}{{ page.url }}";
+            var disqus_url = "{{ site.url }}{{ page.url }}";
 
-             (function() {
-                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-             })();
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
         </script>
-        <noscript>请打开JavaScript来浏览<a href="http://disqus.com/?ref_noscript">DisQus 评论.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">请等待评论加载</a>
+       </div>
       </div>
-      {% include sidebar.html %}
+
+
 {% include footer.html %}

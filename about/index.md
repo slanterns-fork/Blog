@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 关于
+type: keyboard-pic
 ---
 ### 诶，这家伙是谁？
 
