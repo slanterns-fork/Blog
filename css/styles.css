@@ -544,3 +544,9 @@ body .demo-blog {
     width: 500px;
     word-wrap: break-word;
 }
+
+.demo-blog .spinner-wrapper {
+    text-align: center;
+    width: 800px;
+    margin:0 auto;
+}

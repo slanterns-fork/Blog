@@ -21,23 +21,40 @@
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
             {{ content }}
         </div>
-        <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments" id="disqus_thread">
-            <noscript>请打开JavaScript来浏览<a href="http://disqus.com/?ref_noscript">DisQus 评论.</a></noscript>
-            <p>请等待评论加载</p>
+        <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments" id="comments">
+          <form id="submit_comment">
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--1-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea rows=1 class="mdl-textfield__input" id="form_email"></textarea>
+                <label for="form_email" class="mdl-textfield__label">Your email</label>
+              </div>
+              <div class="mdl-cell mdl-cell--1-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea rows=1 class="mdl-textfield__input" id="form_nick"></textarea>
+                <label for="form_nick" class="mdl-textfield__label">Your nickname</label>
+              </div>
+              <div class="mdl-cell mdl-cell--5-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <textarea rows=1 class="mdl-textfield__input" id="form_content"></textarea>
+                <label for="form_content" class="mdl-textfield__label">Join the discussion</label>
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="submit">
+              <i class="material-icons" role="presentation">check</i><span class="visuallyhidden">add comment</span>
+            </button>
+          </form>
+          <div class="spinner-wrapper"><div class="mdl-spinner mdl-js-spinner is-active"></div></div>
         </div>
-        <script type="text/javascript">
-            var disqus_shortname = 'hxbdx';
-
-            var disqus_url = "{{ site.url }}{{ page.url }}";
-
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
        </div>
       </div>
+      <script src="{{ site.baseurl }}js/comments.js?ver={{ site.style_version }}" type="text/javascript"></script>
+      <script>
+        $(function() {
+          renderComments($, '{{ page.id }}');
+
+          $('#submit_comment').submit(function() {
+              submitComment($, '{{ page.id }}');
+          });
+        });
+      </script>
 
 
 {% include footer.html %}
