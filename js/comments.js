@@ -68,7 +68,7 @@ function submitComment($, post) {
 		reply_to = -1;
 	}
 
-	if (isValidEmailAddress(email) && nick.trim() != '') {
+	if (isValidEmailAddress(email) && nick.trim() != '' && content.trim() != '') {
 		$.cookie('email', email, { expires: 365, path: '/' })
 		$.cookie('nick', nick, { expires: 365, path: '/' })
 
