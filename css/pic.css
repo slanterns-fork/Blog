@@ -1,24 +1,24 @@
-.demo-blog .coffee-pic.inview .mdl-card__media {
+.demo-blog .coffee-pic .mdl-card__media {
   background-image: url('../images/coffee.jpg');
 }
 
-.demo-blog .typewriter-pic.inview .mdl-card__media {
+.demo-blog .typewriter-pic .mdl-card__media {
   background-image: url('../images/typewriter.jpg');
 }
 
-.demo-blog .akarin-pic.inview .mdl-card__media {
+.demo-blog .akarin-pic .mdl-card__media {
   background-image: url('../images/akarin.jpg');
 }
 
-.demo-blog .keyboard-pic.inview .mdl-card__media {
+.demo-blog .keyboard-pic .mdl-card__media {
   background-image: url('../images/keyboard.jpg');
 }
 
-.demo-blog .tiger-pic.inview .mdl-card__media {
+.demo-blog .tiger-pic .mdl-card__media {
   background-image: url('../images/tiger.jpg');
 }
 
-.demo-blog .broken-plane-pic.inview .mdl-card__media {
+.demo-blog .broken-plane-pic .mdl-card__media {
   background-image: url('../images/broken-plane.jpg');
 }
 
