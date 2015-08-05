@@ -3,7 +3,7 @@ var reply_to = -1;
 var commentCache = {};
 
 function renderComments($, post) {
-	post = post.replace('/', '-');
+	post = post.replace(/\//g, '.');
 	$.get('https://typeblog.net/comments/getComments?post=' + post, function (data) {
 		data = JSON.parse(data);
 		$.each(data.reverse(), function (index, item) {
@@ -58,7 +58,7 @@ function addComment($, selector, item) {
 }
 
 function submitComment($, post) {
-	post = post.replace('/', '-');
+	post = post.replace(/\//g, '.');
 	var email = $('#form_email').val();
 	var nick = $('#form_nick').val();
 	var content = $('#form_content').val();

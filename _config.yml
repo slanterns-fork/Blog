@@ -8,4 +8,4 @@ paginate: 5
 disqus_shortname: hxbdx
 paginate_path: "page:num"
 markdown: rdiscount
-style_version: 201508050816
+style_version: 201508051127
