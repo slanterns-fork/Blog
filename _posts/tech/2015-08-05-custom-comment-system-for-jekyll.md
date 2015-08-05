@@ -169,8 +169,8 @@ import urllib
 import json
 from datetime import datetime
 
-token = '4bb793849b544316a80290187bb8128b'
-key = 'i2byrmiKtnlWLE2593uG3BvhSKyIIj4o6wNGrODnn2qhTZ3f10onjlbcmiXYDLvF'
+token = 'token-of-disqus'
+key = 'key-of-disqus'
 
 client = httplib.HTTPSConnection('disqus.com', 443, timeout = 80)
 params = urllib.urlencode({

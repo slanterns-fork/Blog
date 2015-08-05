@@ -541,8 +541,17 @@ body .demo-blog {
 }
 
 .demo-blog pre {
+    background: #efefef;
     width: 500px;
-    word-wrap: break-word;
+    padding: 20px;
+    overflow-x: scroll;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .demo-blog pre {
+        width: 300px;
+        overflow-x: scroll;
+    }
 }
 
 .demo-blog .spinner-wrapper {
