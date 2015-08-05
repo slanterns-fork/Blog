@@ -175,7 +175,7 @@ key = 'key-of-disqus'
 client = httplib.HTTPSConnection('disqus.com', 443, timeout = 80)
 params = urllib.urlencode({
 	'api_key': key,
-	'forum': 'hxbdx',
+	'forum': 'your-forum',
 	'limit': '100'
 })
 
