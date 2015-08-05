@@ -48,10 +48,19 @@
       <script src="{{ site.baseurl }}js/comments.js?ver={{ site.style_version }}" type="text/javascript"></script>
       <script>
         $(function() {
-          renderComments($, '{{ page.id }}');
+          var page_id = '{{ page.id }}'.trim();
+          var page_url = '{{ page.url }}'.trim();
+          var id = '';
+          if (page_id == '') {
+              id = page_url.replace('.html', '');
+          } else {
+              id = page_id;
+          }
+
+          renderComments($, id);
 
           $('#submit_comment').submit(function() {
-              submitComment($, '{{ page.id }}');
+              submitComment($, id);
           });
         });
       </script>
