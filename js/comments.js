@@ -76,8 +76,13 @@ function submitComment($, post) {
 		if (reply_to > -1) {
 			options['reply'] = reply_to;
 		}
-		$.post('https://typeblog.net/comments/newComment', options, function() {
 
+		$.post('https://typeblog.net/comments/newComment', options)
+		.done(function() {
+			$('#comments').empty();
+			$('.spinner-wrapper').show();
+			$('#form_content').val('');
+			renderComments($, post);
 		});
 
 		reply_to = -1;
