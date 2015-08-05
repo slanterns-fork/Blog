@@ -559,3 +559,7 @@ body .demo-blog {
     width: 800px;
     margin:0 auto;
 }
+
+.demo-blog code {
+    color: #795548;
+}
