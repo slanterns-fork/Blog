@@ -34,3 +34,9 @@ type: keyboard-pic
 ### 版权声明
 
 原创文章采用 [CC Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) 许可协议进行许可。然而，如果作品在中国大陆地区使用，则须采用 [CC Attribution-ShareAlike 3.0 China Mainland](https://creativecommons.org/licenses/by-sa/4.0/) 许可协议。
+
+### 关于评论
+
+评论中所显示的头像来自 `V2EX` 做的 `Gravatar` 反向代理。如果需要设置头像，请到 [Gravatr](http://en.gravatar.com/) 设置头像。本博客将显示 `Gravatar` 上与您的邮箱匹配的头像。
+
+我不会对评论内容作任何言论审查，但同时也希望评论者尽量和谐评论。谢谢。
