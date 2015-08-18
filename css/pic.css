@@ -26,6 +26,10 @@
   background-image: url('../images/wolf.jpg');
 }
 
+.demo-blog .blur-pic .mdl-card__media {
+  background-image: url('../images/blur.jpg');
+}
+
 .demo-blog .brown-color .mdl-card__media {
     background-color: #795548;
 }
