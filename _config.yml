@@ -7,5 +7,8 @@ url: https://typeblog.net
 paginate: 5
 disqus_shortname: hxbdx
 paginate_path: "page:num"
-markdown: rdiscount
+markdown: redcarpet
 style_version: 201508181654
+
+redcarpet:
+ extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]

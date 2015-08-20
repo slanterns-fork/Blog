@@ -30,13 +30,13 @@ type: purple-color
 
 然后我才在 `redis` 的文档上找到了 `sorted set` 这种东西，也就是根据一个 `score` 值进行排序的有序集合。这才是我所需要的东西。这个时候我所用来标记评论的 `id` 使用的其实是 `index`，也就是它在这个数组中的位置，具体的实现是像这个样子
 
-{% highlight coffeescript %}
+```coffeescript
 [err, id] = yield db.zcard commentSet, ko.raw()
 if err?
 	id = 1
 else
 	id += 1
-{% endhighlight %}
+```
 
 每次添加新数据，就先获取数据库内已有的评论数量并加1作为新评论的ID。这个逻辑存在一个潜在的问题，我在后面会提到。
 
@@ -44,7 +44,7 @@ else
 
 就是像这样
 
-{% highlight coffeescript %}
+```coffeescript
 response = []
 map = []
 
@@ -65,7 +65,7 @@ for r in reply
 			orig.replies.push cmt
 	else
 		console.log err
-{% endhighlight %}
+```
 
 请无视有关数据库的部分。
 
@@ -91,13 +91,13 @@ for r in reply
 
 然而在实现后端的时候我并没有实现评论嵌套层数的限制。所以，在实现前端的 `回复` 功能的时候，我必须对此进行处理。在后端内，我们可以看见，我使用 `reply` 属性指向一个评论所回复的评论的ID。所以，当前端从服务器得到评论列表的时候，我使用了类似的后端的方法，把已知的所有评论存储到一个 `id -> comment` 的映射里面
 
-{% highlight javascript %}
+```coffeescript
 commentCache[item.id] = item;
-{% endhighlight %}
+```
 
 这样，在回复的时候，首先通过所点击的按钮的 `id` 属性获得用户要回复的评论ID，然后，从这个映射中找到这个评论，检查它是否是另一个评论的回复。如果是，则重定向当前回复到这个评论的父评论上，而保留一个自动生成的 `Reply to XXX` 文本，以标记用户回复的对象
 
-{% highlight javascript %}
+```coffeescript
 reply_to = $(this).attr('id');
 $('#form_content').trigger('focus');
 $('#form_content').val('Reply to ' + commentCache[reply_to].nick + ':');
@@ -105,13 +105,13 @@ $('#form_content').val('Reply to ' + commentCache[reply_to].nick + ':');
 if (commentCache[reply_to].reply && commentCache[reply_to].reply > -1) {
 	reply_to = commentCache[reply_to].reply;
 }
-{% endhighlight %}
+```
 
 我使用一个全局变量 `reply_to` 来记录用户需要回复的评论ID。哦对了，还需要保留用户取消评论的能力，因为手抽点错是经常发生的。这个简单，在评论内容框的内容被删除至空的时候自动删除全局变量中所记录的要回复的评论ID。
 
 后端也没有实现日期逻辑，所以日期是在客户端实现的，格式化为字符串后直接提交到服务端，按照客户端的日期发布评论。所以，找了个简单的日期格式化函数
 
-{% highlight javascript %}
+```javascript
 function formatDate(date) {
 	var monthNames = [
 		"Jan", "Feb", "Mar",
@@ -126,7 +126,7 @@ function formatDate(date) {
 
 	return monthNames[monthIndex] + ' ' + day + ', ' + year;
 }
-{% endhighlight %}
+```
 
 大家可以发现，在服务端的时候，评论的顺序是按照提交时服务端的时间排列的，而具体显示的日期则是按照客户端的时间……所以……
 
@@ -160,7 +160,7 @@ function formatDate(date) {
 
 我写了一个python2脚本来做评论的迁移
 
-{% highlight python %}
+```python
 #!/usr/bin/env python
 # Encoding: UTF-8
 
@@ -234,7 +234,7 @@ for thread in threads:
 			client.request('POST', '/path/to/your/api/newComment', params, headers)
 
 			submitted[int(comment['id'])] = int(client.getresponse().read())
-{% endhighlight %}
+```
 
 一样用到了和前后端里面类似的处理评论嵌套的方法。
 
