@@ -28,29 +28,29 @@ s/肉/人肉
 
 差点忘了把这件事丢出来：
 
-![pekingdom1]({{ site.baseurl }}res/pekingdom-1.png =400x)
+{% img /res/pekingdom-1.png 400 %}
 
 唔，这个气势真是吓人，各位看官我们再看些别的
 
-![pekingdom2]({{ site.baseurl }}res/pekingdom-2.png =400x)
+{% img /res/pekingdom-2.png 400 %}
 
 原来在北京人眼里，外地人都是超生的啊！莫非只有北京人才是合法的公民么？
 
-![pekingdom3]({{ site.baseurl }}res/pekingdom-3.png =400x)
+{% img /res/pekingdom-3.png 400 %}
 
 这一条简直令我以为我到了香港，简直就和那帮所谓 `港灿` 的行为没有任何两样。自己坐守行政中心的经济条件，却把外地人视为蝗虫，不许他们占用自己的一分资源，不许他们赚走自己的一分钱。
 
-![pekingdom4]({{ site.baseurl }}res/pekingdom-4.png =400x)
+{% img /res/pekingdom-4.png 400 %}
 
 所以说这位PO主似乎有了个观念，就是北京是我一家人建起来的城市，是我的私有财产，容不得其他人，也不许其他人进入，其他人进来就是嫌贫爱富，所有人只配在他出生地接受教育。
 
-![pekingdom5]({{ site.baseurl }}res/pekingdom-5.png =400x)
+{% img /res/pekingdom-5.png 400 %}
 
 原来是有 `难言之隐` 啊！
 
 这帮 `地方保护主义` 者最奇怪的问题是，身为首都，坐享优质资源，却不知道这都是谁给他们的，以为就凭自己那么一小块山坳坳能发展成如今这个样子。我们倒不如来看看北京的人口比例——
 
-![pekingdom6]({{ site.baseurl }}res/pekingdom-6.jpg =400x)
+{% img /res/pekingdom-6.jpg 400 %}
 
 本图来自 <http://news.china.com/domestic/945/20150521/19724338.html>
 

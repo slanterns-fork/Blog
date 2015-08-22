@@ -131,7 +131,7 @@ rrdtool graph $GRAPH -w 700 -h 300 --start -5h \
 
 ### 效果
 
-![peter-ss]({{ site.baseurl }}res/peter-ss.png =400x)
+{% img /res/peter-ss.png 400 %}
 
 这是我用上面的方法统计得到的阿里云中转的 `shadowsocks` 流量。
 

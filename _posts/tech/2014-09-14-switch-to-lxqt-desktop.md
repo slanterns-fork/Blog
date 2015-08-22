@@ -51,8 +51,8 @@ Compiz的配置可以在 `Preferences->CompizConfig Settings Manager` 里面找�
 
 `LXQt` 和 `Compiz` 都没有自带的截图功能，所以我们只能借助于 `gnome-screenshot` 这个小程序。安装好以后，在 `CompizConfig` 里面开启 `Commands` 功能，并且像下两图一样键入内容
 
-![1]({{ site.baseurl }}res/compiz-print1.png =600x)  
-![2]({{ site.baseurl }}res/compiz-print2.png =600x)
+{% img /res/compiz-print1.png 600 %}
+{% img /res/compiz-print2.png 600 %}
 
 保存后可以测试一下， `Print Screen` 键是截取整个屏幕， `Shift + Print Screen` 是截取当前窗口， `Ctrl + Print Screen` 是截取自定义矩形区域。非常方便。
 
@@ -62,9 +62,9 @@ Compiz的配置可以在 `Preferences->CompizConfig Settings Manager` 里面找�
 
 ### 截屏欣赏
 
-![lxqt1]({{ site.baseurl }}res/lxqt1.png =600x)  
-![lxqt2]({{ site.baseurl }}res/lxqt2.png =600x)  
-![lxqt3]({{ site.baseurl }}res/lxqt3.png =600x)
+{% img /res/lxqt1.png 600 %}
+{% img /res/lxqt2.png 600 %}
+{% img /res/lxqt3.png 600 %}
 
 - GTK主题: Numix
 - Qt主题: QtCurve-Numix

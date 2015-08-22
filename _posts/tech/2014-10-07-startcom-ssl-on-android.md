@@ -28,4 +28,4 @@ cat typeblog.net.crt ca-bundle.crt > typeblog.net.bundle.crt
 
 刷新服务器配置以后，在手机上已经可以正常访问了:
 
-![ssl]({{ site.baseurl }}res/ssl.png =400x)
+{% img /res/ssl.png 400 %}
