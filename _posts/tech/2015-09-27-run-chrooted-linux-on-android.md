@@ -30,6 +30,8 @@ type: pink-color
 
 注意，本文中的终端模拟器下执行的命令请全部在root权限下执行。(SSH下的命令请注意看说明)
 
+如果你在过程中遇到了问题，您可以参考本文最后处的FAQ
+
 ### Bootstrap
 
 任何 `Linux` 发行版的安装，都要解决一个先有鸡还是先有蛋的问题，这个过程就是 `bootstrap`, 只不过在某些发行版的安装过程中被自动化了。在Android上安装，同样要经过这个过程。
@@ -230,6 +232,19 @@ chroot /sdcard/linux/root /bin/sshd
 另外，我非常推荐修改ssh设置把ssh服务端的监听IP改成 `127.0.0.1`, 以防止别有用心之人。
 
 如果需要从AUR上安装软件，你需要 `pacaur` 之类的命令，但是注意不要通过添加 `pacman` 软件源的方式安装，因为那些软件源都不支持ARM平台。要安装这类的工具，你得先从 `AUR` 上下载它们的 `PKGBUILD`, 然后放在当前目录里执行 `makepkg -i` 进行编译安装。
+
+### FAQs
+
+Q: 如何使用初始化系统如systemd来管理服务？  
+A: 并不能使用，建议使用supervisord来替代。使用supervisord以后，可以在启动脚本里把执行sshd的代码改成执行supervisord的。
+
+Q: SSH失败，提示PTY allocation failed on channel 0?  
+A: 尝试执行以下代码
+
+```bash
+umount /dev/pts
+mount -t devpts devpts /dev/pts
+```
 
 ### 后记
 
