@@ -62,6 +62,10 @@
     background-color: #607D8B;
 }
 
+.demo-blog .amber-color .mdl-card__media {
+	background-color: #FFC107;
+}
+
 .demo-blog .on-the-road-again .mdl-card__media {
   background-image: url('../images/road.jpg');
 }
