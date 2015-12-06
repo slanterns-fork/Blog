@@ -10,5 +10,7 @@ paginate_path: "page:num"
 markdown: redcarpet
 style_version: 201511251115
 
+gems: ["jekyll-paginate"]
+
 redcarpet:
  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
