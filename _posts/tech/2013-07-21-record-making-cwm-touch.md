@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 小记触摸版CWM Recovery的制作
-category: tech。
+category: tech
 ---
 众所周知，坑爹的CWM Touch木有开放源代码……  
 但是我不甘心，我要给米1做触摸Recovery。  
