@@ -206,6 +206,10 @@ iptables -t nat -A PREROUTING -i venet0 -j DNAT --to-destination 10.0.0.2
 
 使用 `iptables` 和 `sit` (tunnelbroker) 之类的需要额外内核模块的东西，往往会报错，这是因为模块没有编译进去。在内核配置里面打开以后重新编译一次 `UML` 就可以了
 
+### Swap 导致 Udev 卡死
+
+如果你在主机又建立了一个虚拟磁盘作为子系统的 `swap`, 你会发现，如果把它加入UML的 `fstab`, 那么UML将无法启动，卡死在等待udev的时候。这时候，你需要对UML内部的映射设备做个软链接，只要链接到 `/dev` 目录之外，然后把fstab指向这个软链接即可。
+
 ### UML 经常崩溃
 
 一开始我遇到一个这样的问题，就是每次做大量的 `I/O` 操作时UML都会很快崩溃。后来我找到了原因。这原因就是运行 `UML` 的主机的 `/dev/shm` 小于给UML分配的内存空间
