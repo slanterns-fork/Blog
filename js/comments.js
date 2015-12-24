@@ -33,7 +33,7 @@ function addComment($, selector, item) {
 	commentCache[item.id] = item;
 	var str = '<div class="comment mdl-color-text--grey-700" id="comment' + item.id + '"><header class="comment__header">';
 	if (item.hash) {
-		str = str + '<img src="https://cdn.v2ex.com/gravatar/' + item.hash + '" class="comment__avatar">';
+		str = str + '<img src="https://gravatar.typeblog.net/' + item.hash + '" class="comment__avatar">';
 	}
 	var date;
 	if (item.date) {
